@@ -18,3 +18,6 @@
 *運行程式*
 `npm start`
 
+*使用pages*
+https://sam6091260.github.io/todolist_work_smart-automation/
+
