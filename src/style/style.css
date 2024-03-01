@@ -1,0 +1,277 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --blank line-- */
+.container {
+  max-width: 30%;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #F0F7FD, #ECEDFD);
+  color: #8291D4;
+  position: relative;
+  overflow: hidden;
+}
+
+.body-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.header {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #bbc0d7;
+}
+.header h1 {
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.header i {
+  font-size: 12px;
+  color: #bbc0d7;
+}
+
+.progress {
+  display: flex;
+  margin-bottom: 24px;
+}
+.progress span {
+  margin-right: 5px;
+}
+.progress .progress-bar-container {
+  background: #ffffff;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+}
+.progress .progress-bar-container .progress-bar {
+  background: #99ADF4;
+  width: 0%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.todo-area {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-right: -30px;
+  padding-right: 20px;
+  position: relative;
+}
+.todo-area::-webkit-scrollbar {
+  width: 8px;
+}
+.todo-area::-webkit-scrollbar-thumb {
+  background-color: #bbc0d7;
+  border-radius: 4px;
+}
+.todo-area .empty-todo {
+  margin: 32px 0;
+  font-size: 24px;
+  font-weight: 100;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.things {
+  background-color: #fff;
+  border-left: 5px solid #8291D4;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.things input {
+  margin-right: 5px;
+  opacity: 0.6;
+}
+.things input:checked {
+  accent-color: #8291D4;
+  opacity: 1;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #8291D4;
+  cursor: pointer;
+  display: flex;
+}
+.delete-button:hover {
+  opacity: 0.6;
+}
+
+.todo-thing {
+  display: flex;
+}
+
+.sort-done {
+  border-top: 2px solid #bbc0d7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 24px 0;
+  padding-top: 8px;
+}
+.sort-done p {
+  font-size: 14px;
+  margin-right: 5px;
+  color: #bbc0d7;
+}
+
+.switch { /*==設定開關鈕的長寬==*/
+  position: relative;
+  width: 45px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.switch-checkbox {
+  position: absolute;
+  display: none;
+}
+
+.switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.switch-txt {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.switch-txt::before,
+.switch-txt::after {
+  display: block;
+  float: right;
+  width: 50%;
+  font-size: 13px;
+  color: #fff;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/*==開關鈕底色(開啟時)==*/
+.switch-txt::after {
+  content: attr(turnOn);
+  padding-left: 10px;
+  background: #8291D4;
+  color: #fff;
+}
+
+/*開關鈕底色(關閉時)*/
+.switch-txt::before {
+  content: attr(turnOff);
+  padding-right: 10px;
+  background: #ffffff;
+  color: #ffffff;
+  text-align: right;
+}
+
+/*==開關鈕的顏色與大小==*/
+.switch-Round-btn {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  background: #CDD3F6;
+  top: 0;
+  bottom: 0;
+  right: 25px;
+  border-radius: 13px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.switch-checkbox:checked + .switch-label .switch-txt {
+  margin-left: 0;
+}
+
+.switch-checkbox:checked + .switch-label .switch-Round-btn {
+  right: 0;
+}
+
+.todo-input-area {
+  margin-top: 64px;
+}
+.todo-input-area p {
+  margin-bottom: 5px;
+}
+.todo-input-area .todo-input {
+  display: flex;
+  align-items: center;
+}
+.todo-input-area .todo-input input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+.todo-input-area .todo-input .submit {
+  display: flex;
+  background-color: #8291D4;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.todo-input-area .todo-input .submit:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */
