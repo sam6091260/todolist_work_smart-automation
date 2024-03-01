@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/sam6091260/todolist_work_smart-automation/static/css/main.4395972a.css",
-    "main.js": "/sam6091260/todolist_work_smart-automation/static/js/main.db79f901.js",
-    "index.html": "/sam6091260/todolist_work_smart-automation/index.html",
-    "main.4395972a.css.map": "/sam6091260/todolist_work_smart-automation/static/css/main.4395972a.css.map",
-    "main.db79f901.js.map": "/sam6091260/todolist_work_smart-automation/static/js/main.db79f901.js.map"
+    "main.css": "/todolist_work_smart-automation/static/css/main.4395972a.css",
+    "main.js": "/todolist_work_smart-automation/static/js/main.db79f901.js",
+    "index.html": "/todolist_work_smart-automation/index.html",
+    "main.4395972a.css.map": "/todolist_work_smart-automation/static/css/main.4395972a.css.map",
+    "main.db79f901.js.map": "/todolist_work_smart-automation/static/js/main.db79f901.js.map"
   },
   "entrypoints": [
     "static/css/main.4395972a.css",
